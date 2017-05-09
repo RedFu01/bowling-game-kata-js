@@ -1,0 +1,27 @@
+{
+  "name": "bowling-game-kata-js",
+  "version": "1.0.0",
+  "description": "Project for bowling game kata",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "test": "jest",
+    "build": "babel src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedFu01/bowling-game-kata-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RedFu01/bowling-game-kata-js/issues"
+  },
+  "homepage": "https://github.com/RedFu01/bowling-game-kata-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015-node": "^6.1.1",
+    "jest": "^20.0.0"
+  }
+}
