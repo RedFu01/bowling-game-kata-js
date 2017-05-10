@@ -43,10 +43,54 @@ describe('Game', () => {
         game.roll(5)
         game.roll(5)
         game.roll(2)
+        game.roll(2)
 
         const score = game.score();
-        expect(score).toBe(14);
+        expect(score).toBe(16);
 
+    })
+
+    it('should handle strikes', ()=>{
+        const game = new Game();
+
+        game.roll(10);
+        game.roll(2);
+        game.roll(2);
+        game.roll(2);
+
+        const score = game.score();
+        expect(score).toBe(20)
+    })
+
+    it('should handle multiple strikes', ()=>{
+        const game = new Game();
+
+        game.roll(10);
+        game.roll(10);
+        game.roll(2);
+        game.roll(2);
+
+        const score = game.score();
+        expect(score).toBe(38)
+    })
+
+    it('should handle a perfect game', ()=>{
+        const game = new Game();
+
+        game.roll(10); 
+        game.roll(10); 
+        game.roll(10); 
+        game.roll(10); 
+        game.roll(10); 
+        game.roll(10); 
+        game.roll(10); 
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+
+        const score = game.score();
+        expect(score).toBe(38)
     })
 
 })
